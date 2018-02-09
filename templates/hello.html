@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加消费记录</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        //用来获得option元素中selected属性为true的元素的id
+        function Get_Selected_Id(pri){
+            var pro = document.getElementById(pri);
+            var Selected_Id = pro.options[pro.selectedIndex].id;
+//            console.log("Get_Selected_Id:"+Selected_Id);  //测试使用
+            return Selected_Id;         //返回selected属性为true的元素的id
+        }
+ 
+        //执行相应的动作，调用相关数据请求函数
+        function Get_Next(This_ID,Action){
+            var Selected_Id = Get_Selected_Id(This_ID);   //Selected_Id用来记录当前被选中的省或市的ID
+//            alert(Selected_Id)
+            if(Action=='Get_sec')                            //从而可以在下一个级联中加载相应的市或县
+                Get_Sec_Data(Selected_Id);
+        }
+ 
+        //向服务器请求城市列表数据并调用添加城市函数
+        function Get_Sec_Data(Pri_Selected_Id){    //这里的Selected_Id应该是被选中的省份的ID
+//            console.log("Province_Selected_Id:"+Province_Selected_Id);   //测试使用
+            if(Pri_Selected_Id == 'Not_data1'){    //如果选择了"Province"选项，则表示重置当前City和Country的选项内容，不会向服务器请求数据
+                $("#sec").empty();
+                $("#sec").append("<option id='Not_data2'>--请选择小类--</option>");
+            }else{      //否则就会向服务器请求数据
+                $.getJSON('/GetSecData',{'Pri':Pri_Selected_Id},function(sec_list){
+//                    alert(sec_list);      //测试使用
+                    Add_sec(sec_list);    //调用添加城市选项函数
+                });
+            }
+        }
+ 
+        //在当前页面添加城市选项
+        function Add_sec(sec_list){
+            $("#sec").empty();
+            $("#sec").append("<option id='Not_data2'>--请选择小类--</option>");
+            for(var index in sec_list){     //获得城市列表中的城市索引
+                //添加内容的同时在option标签中添加对应的城市ID
+                var text = "<option"+" id='"+sec_list[index]['value']+"'"+ " value='"+sec_list[index]['value'] + "'>"+sec_list[index]['description']+"</option>";
+                $("#sec").append(text);
+                console.log(text);  //用来观察生成的text数据
+            }
+        }
+
+        function Update_items(d1) {
+            var date1 = document.getElementById(d1);
+            $("#date_items").empty();
+            $.getJSON('/GetDateItems',{'date1':date1.value},function(item_list){
+                Add_items(item_list);
+            });        
+            //alert(date1.value);
+        }
+
+        function Add_items(item_list){
+            var tbl = document.getElementById("date_items");
+            var tr = document.createElement("tr");
+            var id = document.createElement("th");
+            var day = document.createElement("th");
+            var cost = document.createElement("th");
+            var name = document.createElement("th");
+            var seller = document.createElement("th");
+            var pri = document.createElement("th");
+            var sec = document.createElement("th");
+            var per = document.createElement("th");
+            id.innerHTML = "id";
+            day.innerHTML = "日期";
+            cost.innerHTML = "金额";
+            name.innerHTML = "商品";
+            seller.innerHTML = "商家";
+            pri.innerHTML = "大类";
+            sec.innerHTML = "小类";
+            per.innerHTML = "时段";
+            tbl.appendChild(tr);
+            tr.appendChild(id);
+            tr.appendChild(day);
+            tr.appendChild(cost);
+            tr.appendChild(name);
+            tr.appendChild(seller);
+            tr.appendChild(pri);
+            tr.appendChild(sec);
+            tr.appendChild(per);
+            for(var index in item_list){
+                var tr = document.createElement("tr");
+                var id = document.createElement("th");
+                var day = document.createElement("th");
+                var cost = document.createElement("th");
+                var name = document.createElement("th");
+                var seller = document.createElement("th");
+                var pri = document.createElement("th");
+                var sec = document.createElement("th");
+                var per = document.createElement("th");
+                id.innerHTML = item_list[index]["id"];
+                day.innerHTML = item_list[index]["year"]+"-"+item_list[index]["mon"]+"-"+item_list[index]["day"];
+                cost.innerHTML = item_list[index]["cost"];
+                name.innerHTML = item_list[index]["cost_name"];
+                seller.innerHTML = item_list[index]["seller"];
+                pri.innerHTML = item_list[index]["pri_type"];
+                sec.innerHTML = item_list[index]["sec_type"];
+                per.innerHTML = item_list[index]["period"];
+                tbl.appendChild(tr);
+                tr.appendChild(id);
+                tr.appendChild(day);
+                tr.appendChild(cost);
+                tr.appendChild(name);
+                tr.appendChild(seller);
+                tr.appendChild(pri);
+                tr.appendChild(sec);
+                tr.appendChild(per);
+
+
+            }
+            var tr = document.getElementsByTagName("tr");
+            for(var i=0; i < tr.length; i++) {
+                bgcChange(tr[i]);
+            }
+        }
+ 
+    </script>
+</head>
+<body>
+    <p>输入您的消费记录：</p>
+    <form action="/payment_post" method="post">
+        {% csrf_token %}
+        <input id="cost" type="text" name="cost" placeholder="输入金额" />
+        <input id="name" type="text" name="name" placeholder="输入名称" />
+        <input id="seller" type="text" name="seller" placeholder="输入商家" />
+        <select id="pri" name="pri" onchange="Get_Next('pri','Get_sec')">
+            <option id="Not_data1">--请选择大类--</option>
+            {% for pri_item in pri %}
+            <option id={{pri_item.value}} value={{pri_item.value}}>{{pri_item.description}}</option>
+            {% endfor %}
+        </select>
+        <select id="sec" name="sec">
+            <option id="Not_data2">--请选择小类--</option>
+        </select>
+        <select id="per" name="per">
+            <option id="Not_data3">--请选择时段--</option>
+            {% for per_item in per %}
+            <option id={{per_item.value}} value={{per_item.value}}>{{per_item.description}}</option>
+            {% endfor %}
+        </select>
+        <input id="date" type="date" name=date />
+        <input id="sub" type="submit" name="sub" />
+    </form>
+
+    <p>今日消费记录：</p>
+    <table name="items" id="items" border="1">
+        <tr name="title" value="not_data">
+            <th>id</th>
+            <th>日期</th>
+            <th>金额</th>
+            <th>名称</th>
+            <th>商家</th>
+            <th>大类</th>
+            <th>小类</th>
+            <th>时段</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <th>{{record.id}}</th>
+            <th>{{record.year}}-{{record.mon}}-{{record.day}}</th>
+            <th>{{record.cost}}</th>
+            <th>{{record.cost_name}}</th>
+            <th>{{record.seller}}</th>
+            <th>{{record.pri_type}}</th>
+            <th>{{record.sec_type}}</th>
+            <th>{{record.period}}</th>
+            <th>
+                <a href="delete_item?id={{record.id}}">删除</a>
+            </th>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>往日消费记录：<input type="date" name="date1" id="date1" onchange="Update_items('date1')" /></p>
+    <table name="date_items" id="date_items" border="1">
+    </table>
+    
+
+    <iframe style="display:none" name="hiddenIFrame" id="hiddenIFrame" />
+    <br/>
+</body>
+</html>

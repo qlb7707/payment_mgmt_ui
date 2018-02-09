@@ -1,0 +1,15 @@
+<html>
+    <h1>{{hello}}</h1>
+    <select id='select1' name='select1'>
+        <option value='0'>--请选择大类--</option>
+        {% for pri_item in pri %}
+            <option value={{pri_item.value}}>{{pri_item.description}}</option>
+        {% endfor %}
+    </select>
+    <select>
+        <option value=''>--请选择时间段--</option>
+        {% for per_item in per %}
+            <option value={{per_item.value}}>{{per_item.description}}</option>
+        {% endfor %}
+    </select>
+</html>

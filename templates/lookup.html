@@ -1,0 +1,38 @@
+<html>
+    <head lang="en">
+        <meta charset="utf-8" />
+        <title>纪录</title>
+    </head>
+    <body>
+        <p>您的消费记录：</p>
+        <table border="1">
+            <tr name="title" value="not_data">
+                <th>id</th>
+                <th>日期</th>
+                <th>金额</th>
+                <th>名称</th>
+                <th>商家</th>
+                <th>大类</th>
+                <th>小类</th>
+                <th>时段</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+                <th>{{record.id}}</th>
+                <th>{{record.year}}-{{record.mon}}-{{record.day}}</th>
+                <th>{{record.cost}}</th>
+                <th>{{record.cost_name}}</th>
+                <th>{{record.seller}}</th>
+                <th>{{record.pri_type}}</th>
+                <th>{{record.sec_type}}</th>
+                <th>{{record.period}}</th>
+                <th>
+                    <a href="delete_item?id={{record.id}}">删除</a>
+                </th>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </body>
+    
+<html>
