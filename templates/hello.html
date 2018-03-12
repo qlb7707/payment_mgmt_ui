@@ -26,7 +26,7 @@
 //            console.log("Province_Selected_Id:"+Province_Selected_Id);   //测试使用
             if(Pri_Selected_Id == 'Not_data1'){    //如果选择了"Province"选项，则表示重置当前City和Country的选项内容，不会向服务器请求数据
                 $("#sec").empty();
-                $("#sec").append("<option id='Not_data2'>--请选择小类--</option>");
+                $("#sec").append("<option id='Not_data2' value='Not_data2'>--请选择小类--</option>");
             }else{      //否则就会向服务器请求数据
                 $.getJSON('/GetSecData',{'Pri':Pri_Selected_Id},function(sec_list){
 //                    alert(sec_list);      //测试使用
@@ -38,7 +38,7 @@
         //在当前页面添加城市选项
         function Add_sec(sec_list){
             $("#sec").empty();
-            $("#sec").append("<option id='Not_data2'>--请选择小类--</option>");
+            $("#sec").append("<option id='Not_data2' value='Not_data2'>--请选择小类--</option>");
             for(var index in sec_list){     //获得城市列表中的城市索引
                 //添加内容的同时在option标签中添加对应的城市ID
                 var text = "<option"+" id='"+sec_list[index]['value']+"'"+ " value='"+sec_list[index]['value'] + "'>"+sec_list[index]['description']+"</option>";
@@ -119,33 +119,163 @@
                 bgcChange(tr[i]);
             }
         }
+    
+
+    function checkCost() {
+        var cost = document.getElementById('cost');
+        var err = document.getElementById('costErr');
+        if (cost.value == "" || cost.value == null) {
+            err.innerHTML="金额不能为空";
+            return false;
+        }
+        if (!isRealNum(cost.value)) {
+            err.innerHTML="输入不是数字";
+            return false;
+        }
+        err.innerHTML="OK";
+        return True;
+    }
+
+    function isRealNum(val) {
+        if(!isNaN(val)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkName() {
+        var name = document.getElementById('name');
+        var err = document.getElementById('nameErr');
+        if (name.value == "" || name.value == null) {
+            err.innerHTML = "商品名称不能为空";
+            return false;
+        }
+        err.innerHTML = "OK";
+        return true;
+    }
+
+    function checkSeller() {
+        var name = document.getElementById('seller');
+        var err = document.getElementById('sellerErr');
+        if (name.value == "" || name.value == null) {
+            err.innerHTML = "商家名称不能为空";
+            return false;
+        }
+        err.innerHTML = "OK";
+        return true;
+    }
+
+    function checkPri() {
+        var pri = document.getElementById('pri');
+        var err = document.getElementById('priErr');
+        if (pri.value == "" || pri.value == null || pri.value == "Not_data1") {
+            err.innerHTML = "大类不能为空";
+            return false;
+        }
+        err.innerHTML = "OK";
+        return true;
+    }
  
+    function checkSec() {
+        var pri = document.getElementById('sec');
+        var err = document.getElementById('secErr');
+        if (pri.value == "" || pri.value == null || pri.value == "Not_data2") {
+            err.innerHTML = "小类不能为空";
+            return false;
+        }
+        err.innerHTML = "OK";
+        return true;
+    }
+
+    function checkPer() {
+        var pri = document.getElementById('per');
+        var err = document.getElementById('perErr');
+        if (pri.value == "" || pri.value == null || pri.value == "Not_data3") {
+            err.innerHTML = "时段不能为空";
+            return false;
+        }
+        err.innerHTML = "OK";
+        return true;
+    }
+
+    function checkDate() {
+        var name = document.getElementById('date');
+        var err = document.getElementById('dateErr');
+        if (name.value == "" || name.value == null) {
+            err.innerHTML = "日期不能为空";
+            return false;
+        }
+        err.innerHTML = "OK";
+        return true;
+    }
+
+    function checkForm() {
+        var costip = checkCost();
+        var nameip = checkName();
+        var sellerip = checkSeller();
+        var priip = checkPri();
+        var secip = checkSec();
+        var perip = checkPer();
+        var dateip = checkDate();
+        if (costip && nameip && sellerip && priip && secip && perip && dateip) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     </script>
 </head>
 <body>
+    <h1>消费记录录入</h1>
+    <p>转到：<a href="/lookup">查询</a></p>
     <p>输入您的消费记录：</p>
-    <form action="/payment_post" method="post">
+    <form action="#" method="post" onSubmit="return checkForm()">
         {% csrf_token %}
-        <input id="cost" type="text" name="cost" placeholder="输入金额" />
-        <input id="name" type="text" name="name" placeholder="输入名称" />
-        <input id="seller" type="text" name="seller" placeholder="输入商家" />
-        <select id="pri" name="pri" onchange="Get_Next('pri','Get_sec')">
-            <option id="Not_data1">--请选择大类--</option>
-            {% for pri_item in pri %}
-            <option id={{pri_item.value}} value={{pri_item.value}}>{{pri_item.description}}</option>
-            {% endfor %}
-        </select>
-        <select id="sec" name="sec">
-            <option id="Not_data2">--请选择小类--</option>
-        </select>
-        <select id="per" name="per">
-            <option id="Not_data3">--请选择时段--</option>
-            {% for per_item in per %}
-            <option id={{per_item.value}} value={{per_item.value}}>{{per_item.description}}</option>
-            {% endfor %}
-        </select>
-        <input id="date" type="date" name=date />
-        <input id="sub" type="submit" name="sub" />
+        <div>
+            <input id="cost" type="text" name="cost" placeholder="输入金额" onBlur="checkCost()" />
+            <span id="costErr" />
+        </div>
+        <div>
+            <input id="name" type="text" name="name" placeholder="输入名称" onBlur="checkName()" />
+            <span id="nameErr" />
+        </div>
+        <div>
+            <input id="seller" type="text" name="seller" placeholder="输入商家" onBlur="checkSeller()" />
+            <span id="sellerErr" />
+        </div>
+        <div>
+            <select id="pri" name="pri" onchange="Get_Next('pri','Get_sec')">
+                <option id="Not_data1" value="Not_data1">--请选择大类--</option>
+                {% for pri_item in pri %}
+                <option id={{pri_item.value}} value={{pri_item.value}}>{{pri_item.description}}</option>
+                {% endfor %}
+            </select>
+            <span id="priErr" />
+        </div>
+        <div>
+            <select id="sec" name="sec">
+                <option id="Not_data2" value="Not_data2">--请选择小类--</option>
+            </select>
+            <span id="secErr" />
+        </div>
+        <div>
+            <select id="per" name="per">
+                <option id="Not_data3" value="Not_data3">--请选择时段--</option>
+                {% for per_item in per %}
+                <option id={{per_item.value}} value={{per_item.value}}>{{per_item.description}}</option>
+                {% endfor %}
+            </select>
+            <span id="perErr" />
+        </div>
+        <div>
+            <input id="date" type="date" name=date onBlur="checkDate()" />
+            <span id="dateErr" />
+        </div>
+        <div>
+            <input id="sub" type="submit" name="sub"  />
+        </div>
     </form>
 
     <p>今日消费记录：</p>
@@ -162,17 +292,17 @@
         </tr>
         {% for record in records %}
         <tr>
-            <th>{{record.id}}</th>
-            <th>{{record.year}}-{{record.mon}}-{{record.day}}</th>
-            <th>{{record.cost}}</th>
-            <th>{{record.cost_name}}</th>
-            <th>{{record.seller}}</th>
-            <th>{{record.pri_type}}</th>
-            <th>{{record.sec_type}}</th>
-            <th>{{record.period}}</th>
-            <th>
+            <td>{{record.id}}</td>
+            <td>{{record.year}}-{{record.mon}}-{{record.day}}</td>
+            <td>{{record.cost}}</td>
+            <td>{{record.cost_name}}</td>
+            <td>{{record.seller}}</td>
+            <td>{{record.pri_type}}</td>
+            <td>{{record.sec_type}}</td>
+            <td>{{record.period}}</td>
+            <td>
                 <a href="delete_item?id={{record.id}}">删除</a>
-            </th>
+            </td>
         </tr>
         {% endfor %}
     </table>

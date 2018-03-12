@@ -1,34 +1,112 @@
 <html>
     <head lang="en">
         <meta charset="utf-8" />
-        <title>纪录</title>
+        <title>纪录查询</title>
+        <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        //用来获得option元素中selected属性为true的元素的id
+        function Get_Selected_Id(pri){
+            var pro = document.getElementById(pri);
+            var Selected_Id = pro.options[pro.selectedIndex].id;
+//            console.log("Get_Selected_Id:"+Selected_Id);  //测试使用
+            return Selected_Id;         //返回selected属性为true的元素的id
+        }
+ 
+        //执行相应的动作，调用相关数据请求函数
+        function Get_Next(This_ID,Action){
+            var Selected_Id = Get_Selected_Id(This_ID);   //Selected_Id用来记录当前被选中的省或市的ID
+//            alert(Selected_Id)
+            if(Action=='Get_sec')                            //从而可以在下一个级联中加载相应的市或县
+                Get_Sec_Data(Selected_Id);
+        }
+ 
+        //向服务器请求城市列表数据并调用添加城市函数
+        function Get_Sec_Data(Pri_Selected_Id){    //这里的Selected_Id应该是被选中的省份的ID
+//            console.log("Province_Selected_Id:"+Province_Selected_Id);   //测试使用
+            if(Pri_Selected_Id == 'Not_data1'){    //如果选择了"Province"选项，则表示重置当前City和Country的选项内容，不会向服务器请求数据
+                $("#sec").empty();
+                $("#sec").append("<option id='Not_data2' value='Not_data2'>--请选择小类--</option>");
+            }else{      //否则就会向服务器请求数据
+                $.getJSON('/GetSecData',{'Pri':Pri_Selected_Id},function(sec_list){
+//                    alert(sec_list);      //测试使用
+                    Add_sec(sec_list);    //调用添加城市选项函数
+                });
+            }
+        }
+ 
+        //在当前页面添加城市选项
+        function Add_sec(sec_list){
+            $("#sec").empty();
+            $("#sec").append("<option id='Not_data2' value='Not_data2'>--请选择小类--</option>");
+            for(var index in sec_list){     //获得城市列表中的城市索引
+                //添加内容的同时在option标签中添加对应的城市ID
+                var text = "<option"+" id='"+sec_list[index]['value']+"'"+ " value='"+sec_list[index]['value'] + "'>"+sec_list[index]['description']+"</option>";
+                $("#sec").append(text);
+                console.log(text);  //用来观察生成的text数据
+            }
+        }
+    </script>
     </head>
     <body>
+        <h1>消费记录查询</h1>
+        <p>转到：<a href="/">录入</a></p>
         <p>您的消费记录：</p>
+        <div>
+            <table>
+                <tr>
+                    <form name="search_filter" id="search_filter" action="#" method="get">
+                    <td>起始日期：<input name="date1" type="date" id="date1" /></td>
+                    <td>结束日期：<input name="date2" type="date" id="date2" /></td>
+                    <td>商品名称：<input name="name" type="text" id="name" placeholder="输入商品名称" /></td>
+                    <td>商家：<input name="seller" type="text" id="seller" placeholder="输入商家" /></td>
+                    <td>
+                        大类：
+                        <select name="pri" id="pri" onchange="Get_Next('pri','Get_sec')">
+                            <option id="Not_data1" value="Not_data1">--请选择大类--</option>
+                            {% for pri_item in pri %}
+                            <option id={{pri_item.value}} value={{pri_item.value}}>{{pri_item.description}}</option>
+                        {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        小类：
+                        <select name="sec" id="sec">
+                            <option id="Not_data2" value="Not_data2">--请选择小类--</option>
+                        </select>
+                    </td>
+                    <td>
+                        时段：
+                        <select name="per" id="per">
+                            <option id="Not_data3" value="Not_data3">--请选择时段--</option>
+                            {% for per_item in per %}
+                            <option id={{per_item.value}} value={{per_item.value}}>{{per_item.description}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <input type="submit" value="搜索" />
+                    </td>
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>{{search_result}}</p>
+        </div>
         <table border="1">
             <tr name="title" value="not_data">
-                <th>id</th>
                 <th>日期</th>
                 <th>金额</th>
                 <th>名称</th>
                 <th>商家</th>
-                <th>大类</th>
-                <th>小类</th>
-                <th>时段</th>
             </tr>
             {% for record in records %}
             <tr>
-                <th>{{record.id}}</th>
-                <th>{{record.year}}-{{record.mon}}-{{record.day}}</th>
-                <th>{{record.cost}}</th>
-                <th>{{record.cost_name}}</th>
-                <th>{{record.seller}}</th>
-                <th>{{record.pri_type}}</th>
-                <th>{{record.sec_type}}</th>
-                <th>{{record.period}}</th>
-                <th>
-                    <a href="delete_item?id={{record.id}}">删除</a>
-                </th>
+                <td>{{record.year}}-{{record.mon}}-{{record.day}}</td>
+                <td>{{record.cost}}</td>
+                <td>{{record.cost_name}}</td>
+                <td>{{record.seller}}</td>
+                
             </tr>
             {% endfor %}
 

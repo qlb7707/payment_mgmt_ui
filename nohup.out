@@ -1,0 +1,653 @@
+[25/Feb/2018 15:58:51] "GET /lookup HTTP/1.1" 200 6155
+[25/Feb/2018 15:58:54] "GET / HTTP/1.1" 200 13087
+[25/Feb/2018 15:59:37] "GET / HTTP/1.1" 200 13087
+[25/Feb/2018 15:59:40] "GET / HTTP/1.1" 200 13087
+[25/Feb/2018 15:59:44] "GET /lookup HTTP/1.1" 200 6155
+[25/Feb/2018 22:54:24] "GET / HTTP/1.1" 200 13087
+[25/Feb/2018 22:55:49] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[25/Feb/2018 22:56:14] "POST / HTTP/1.1" 200 13429
+[26/Feb/2018 07:29:21] "GET / HTTP/1.1" 200 12396
+Not Found: /favicon.ico
+[26/Feb/2018 07:29:22] "GET /favicon.ico HTTP/1.1" 404 2526
+[26/Feb/2018 07:29:26] "GET /lookup HTTP/1.1" 200 6155
+[26/Feb/2018 07:29:39] "GET /lookup?date1=&date2=&name=%E9%A6%92%E5%A4%B4&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6547
+[26/Feb/2018 10:47:40] "GET / HTTP/1.1" 200 12396
+[26/Feb/2018 10:48:26] "GET /lookup HTTP/1.1" 200 6155
+[26/Feb/2018 10:48:35] "GET /lookup?date1=&date2=&name=&seller=%E8%B7%AF%E8%BE%B9&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6943
+[26/Feb/2018 10:48:40] "GET / HTTP/1.1" 200 12396
+[26/Feb/2018 10:49:13] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[26/Feb/2018 10:49:27] "POST / HTTP/1.1" 200 12732
+[26/Feb/2018 10:49:34] "GET /lookup HTTP/1.1" 200 6155
+[26/Feb/2018 10:49:36] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6155
+[26/Feb/2018 10:49:43] "GET /lookup?date1=2018-02-18&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 12562
+[26/Feb/2018 10:51:21] "GET / HTTP/1.1" 200 12732
+[26/Feb/2018 12:47:21] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[26/Feb/2018 12:47:32] "POST / HTTP/1.1" 200 13075
+[27/Feb/2018 00:06:26] "GET / HTTP/1.1" 200 12396
+Not Found: /favicon.ico
+[27/Feb/2018 00:06:28] "GET /favicon.ico HTTP/1.1" 404 2526
+[27/Feb/2018 00:07:31] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[27/Feb/2018 00:07:42] "POST / HTTP/1.1" 200 12396
+[27/Feb/2018 00:07:50] "GET /GetDateItems?date1=2018-02-26 HTTP/1.1" 200 508
+[27/Feb/2018 00:08:01] "GET / HTTP/1.1" 200 12396
+[27/Feb/2018 13:16:39] "POST / HTTP/1.1" 200 12396
+[27/Feb/2018 13:17:04] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[27/Feb/2018 13:17:19] "POST / HTTP/1.1" 200 12739
+[27/Feb/2018 13:17:26] "GET /GetDateItems?date1=2018-02-26 HTTP/1.1" 200 686
+[27/Feb/2018 13:17:35] "GET /GetDateItems?date1=2018-02-27 HTTP/1.1" 200 178
+[27/Feb/2018 13:36:31] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[27/Feb/2018 13:36:45] "POST / HTTP/1.1" 200 13081
+[27/Feb/2018 13:36:48] "GET /lookup HTTP/1.1" 200 6155
+[27/Feb/2018 13:36:51] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[27/Feb/2018 13:36:54] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=2&per=Not_data3 HTTP/1.1" 200 11399
+[27/Feb/2018 13:38:00] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=2&per=Not_data3 HTTP/1.1" 200 11399
+[27/Feb/2018 13:38:37] "GET / HTTP/1.1" 200 13081
+[27/Feb/2018 13:38:40] "GET / HTTP/1.1" 200 13081
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 25, 2018 - 15:58:18
+Django version 1.11.10, using settings 'payment_ui.settings'
+Starting development server at http://0.0.0.0:8888/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x1119d0a28>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 26, in check_resolver
+    return check_method()
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/qlb/workspace/payment_ui/payment_ui/urls.py", line 18, in <module>
+    from . import view
+  File "/Users/qlb/workspace/payment_ui/payment_ui/view.py", line 38
+SyntaxError: Non-ASCII character '\xe5' in file /Users/qlb/workspace/payment_ui/payment_ui/view.py on line 38, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+[27/Feb/2018 14:14:38] "GET / HTTP/1.1" 200 13081
+[27/Feb/2018 14:14:39] "GET /lookup HTTP/1.1" 200 6204
+[27/Feb/2018 14:14:42] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6233
+[27/Feb/2018 14:14:48] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6233
+[27/Feb/2018 14:15:14] "GET /lookup?date1=2018-01-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 55468
+[27/Feb/2018 14:15:52] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6233
+[27/Feb/2018 14:16:17] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 24684
+[27/Feb/2018 14:16:30] "GET /lookup?date1=2018-01-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 55468
+[27/Feb/2018 22:31:41] "GET / HTTP/1.1" 200 13081
+Not Found: /favicon.ico
+[27/Feb/2018 22:31:43] "GET /favicon.ico HTTP/1.1" 404 2526
+[27/Feb/2018 22:37:01] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[27/Feb/2018 22:37:13] "POST / HTTP/1.1" 200 13424
+[27/Feb/2018 22:37:23] "GET /lookup HTTP/1.1" 200 6204
+[27/Feb/2018 22:37:53] "GET /lookup?date1=2018-01-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 55671
+[28/Feb/2018 09:33:45] "GET /lookup?date1=2018-01-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 55671
+[28/Feb/2018 09:34:02] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 24887
+[28/Feb/2018 09:36:24] "GET /lookup?date1=2018-01-01&date2=2018-01-31&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 37021
+[28/Feb/2018 10:08:42] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=1 HTTP/1.1" 200 24295
+[28/Feb/2018 10:08:58] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=2 HTTP/1.1" 200 18032
+[28/Feb/2018 10:09:04] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=3 HTTP/1.1" 200 6836
+[28/Feb/2018 10:09:11] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=4 HTTP/1.1" 200 25216
+[28/Feb/2018 10:09:44] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[28/Feb/2018 10:09:46] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 39197
+[28/Feb/2018 10:09:54] "GET /GetSecData?Pri=2 HTTP/1.1" 200 289
+[28/Feb/2018 10:09:55] "GET /lookup?date1=&date2=&name=&seller=&pri=2&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6644
+[28/Feb/2018 10:09:59] "GET /GetSecData?Pri=3 HTTP/1.1" 200 306
+[28/Feb/2018 10:10:00] "GET /lookup?date1=&date2=&name=&seller=&pri=3&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 14204
+[28/Feb/2018 10:10:06] "GET /GetSecData?Pri=4 HTTP/1.1" 200 180
+[28/Feb/2018 10:10:10] "GET /lookup?date1=&date2=&name=&seller=&pri=4&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 11495
+[28/Feb/2018 10:10:15] "GET /GetSecData?Pri=5 HTTP/1.1" 200 208
+[28/Feb/2018 10:10:16] "GET /lookup?date1=&date2=&name=&seller=&pri=5&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6844
+[28/Feb/2018 10:10:25] "GET /GetSecData?Pri=6 HTTP/1.1" 200 266
+[28/Feb/2018 10:10:26] "GET /lookup?date1=&date2=&name=&seller=&pri=6&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6832
+[28/Feb/2018 10:10:35] "GET /GetSecData?Pri=7 HTTP/1.1" 200 116
+[28/Feb/2018 10:10:36] "GET /lookup?date1=&date2=&name=&seller=&pri=7&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6233
+[28/Feb/2018 10:10:41] "GET /GetSecData?Pri=8 HTTP/1.1" 200 138
+[28/Feb/2018 10:10:42] "GET /lookup?date1=&date2=&name=&seller=&pri=8&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6634
+[28/Feb/2018 10:11:33] "GET /GetSecData?Pri=3 HTTP/1.1" 200 306
+[28/Feb/2018 12:34:53] "GET / HTTP/1.1" 200 12396
+[28/Feb/2018 12:35:32] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[28/Feb/2018 12:35:43] "POST / HTTP/1.1" 200 12738
+[28/Feb/2018 12:35:45] "GET /lookup HTTP/1.1" 200 6204
+[28/Feb/2018 12:35:54] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 25089
+[28/Feb/2018 12:36:21] "GET /lookup?date1=2018-01-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 55873
+[28/Feb/2018 14:04:04] "GET /lookup?date1=&date2=&name=&seller=%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6844
+[28/Feb/2018 16:48:57] "GET / HTTP/1.1" 200 12738
+[28/Feb/2018 16:49:21] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[28/Feb/2018 16:49:32] "POST / HTTP/1.1" 200 13089
+[28/Feb/2018 16:49:35] "GET /lookup HTTP/1.1" 200 6204
+[28/Feb/2018 16:49:44] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[28/Feb/2018 16:49:48] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=2&per=Not_data3 HTTP/1.1" 200 11480
+[28/Feb/2018 21:50:18] "GET / HTTP/1.1" 200 13089
+[28/Feb/2018 21:50:51] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[28/Feb/2018 21:51:09] "POST / HTTP/1.1" 200 13432
+[28/Feb/2018 21:51:14] "GET /lookup HTTP/1.1" 200 6204
+[28/Feb/2018 21:51:36] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 25503
+[28/Feb/2018 21:52:05] "GET /lookup?date1=2018-01-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 56287
+[28/Feb/2018 21:53:26] "GET /lookup?date1=&date2=&name=%E8%96%AF%E7%89%87&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 8524
+[28/Feb/2018 21:54:02] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[28/Feb/2018 21:54:14] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=3&per=Not_data3 HTTP/1.1" 200 11723
+[28/Feb/2018 21:55:45] "GET / HTTP/1.1" 200 13432
+[28/Feb/2018 21:55:57] "GET /GetDateItems?date1=2018-01-10 HTTP/1.1" 200 884
+[28/Feb/2018 22:01:02] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[28/Feb/2018 22:01:07] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=3&per=Not_data3 HTTP/1.1" 200 11723
+[28/Feb/2018 22:01:15] "GET / HTTP/1.1" 200 13432
+[28/Feb/2018 22:01:25] "GET /GetDateItems?date1=2018-01-10 HTTP/1.1" 200 884
+[28/Feb/2018 22:01:54] "GET /GetDateItems?date1=2018-01-22 HTTP/1.1" 200 526
+[28/Feb/2018 22:02:11] "GET /GetDateItems?date1=2018-01-10 HTTP/1.1" 200 884
+[28/Feb/2018 22:02:18] "GET /GetDateItems?date1=2018-01-22 HTTP/1.1" 200 526
+[28/Feb/2018 22:02:27] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 08:46:23] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=1&sec=3&per=Not_data3 HTTP/1.1" 200 8457
+[01/Mar/2018 08:46:39] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 25503
+[01/Mar/2018 08:46:51] "GET / HTTP/1.1" 200 12396
+[01/Mar/2018 08:47:41] "GET /GetSecData?Pri=2 HTTP/1.1" 200 289
+[01/Mar/2018 08:47:43] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 08:47:54] "POST / HTTP/1.1" 200 12740
+[01/Mar/2018 08:48:01] "GET /lookup HTTP/1.1" 200 6204
+[01/Mar/2018 08:48:15] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 25707
+[01/Mar/2018 08:52:59] "GET /lookup?date1=&date2=&name=&seller=%E7%BE%8E%E5%A5%BD%E5%B9%BF%E5%9C%BA&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6650
+[01/Mar/2018 08:59:55] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 08:59:57] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 40017
+[01/Mar/2018 09:00:09] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 09:00:11] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 19651
+[01/Mar/2018 09:03:51] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 09:03:54] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=2&per=Not_data3 HTTP/1.1" 200 11884
+[01/Mar/2018 09:04:11] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 09:04:15] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=1&sec=2&per=Not_data3 HTTP/1.1" 200 8226
+[01/Mar/2018 09:04:34] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 09:04:47] "GET /lookup?date1=2018-02-01&date2=&name=&seller=&pri=1&sec=1&per=Not_data3 HTTP/1.1" 200 12837
+[01/Mar/2018 09:05:28] "GET /lookup?date1=2018-02-01&date2=&name=%E6%97%A9%E9%A5%AD&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 7224
+[01/Mar/2018 11:41:38] "GET /lookup?date1=&date2=&name=&seller=%E8%B6%85%E5%B8%82&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 18949
+[01/Mar/2018 13:31:50] "GET / HTTP/1.1" 200 12740
+[01/Mar/2018 13:32:33] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 13:32:59] "POST / HTTP/1.1" 200 13081
+[01/Mar/2018 13:33:42] "GET /GetDateItems?date1=2018-03-01 HTTP/1.1" 200 358
+[01/Mar/2018 13:33:58] "GET / HTTP/1.1" 200 13081
+[01/Mar/2018 21:45:03] "GET / HTTP/1.1" 200 13081
+[01/Mar/2018 21:45:11] "GET / HTTP/1.1" 200 13081
+[01/Mar/2018 21:45:15] "GET /lookup HTTP/1.1" 200 6204
+[01/Mar/2018 21:45:24] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 21:46:22] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 40218
+[01/Mar/2018 21:47:18] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[01/Mar/2018 21:47:22] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=1&per=Not_data3 HTTP/1.1" 200 21516
+[01/Mar/2018 21:48:23] "GET /lookup?date1=&date2=&name=&seller=%E6%B0%B4%E5%A4%A9%E5%A0%82%E9%A3%9F%E5%A0%82&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 11294
+[01/Mar/2018 21:48:35] "GET /lookup?date1=&date2=&name=&seller=%E5%A4%96%E5%8D%96&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 7094
+[01/Mar/2018 22:56:52] "GET / HTTP/1.1" 200 13081
+[02/Mar/2018 06:53:44] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[02/Mar/2018 06:53:59] "POST / HTTP/1.1" 200 12396
+[02/Mar/2018 06:54:07] "GET /GetDateItems?date1=2018-03-01 HTTP/1.1" 200 514
+[02/Mar/2018 06:54:12] "GET / HTTP/1.1" 200 12396
+[02/Mar/2018 13:08:03] "GET / HTTP/1.1" 200 12396
+[02/Mar/2018 13:08:29] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[02/Mar/2018 13:08:38] "POST / HTTP/1.1" 200 12738
+[02/Mar/2018 13:28:00] "GET /lookup HTTP/1.1" 200 6204
+[02/Mar/2018 13:28:10] "GET /lookup?date1=2018-01-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 57086
+[02/Mar/2018 15:14:30] "GET / HTTP/1.1" 200 12738
+[02/Mar/2018 15:14:35] "GET /lookup HTTP/1.1" 200 6204
+[02/Mar/2018 15:14:47] "GET /GetSecData?Pri=9 HTTP/1.1" 200 208
+[02/Mar/2018 15:14:51] "GET /lookup?date1=&date2=&name=&seller=&pri=9&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 7066
+[02/Mar/2018 15:15:08] "GET /GetSecData?Pri=5 HTTP/1.1" 200 208
+[02/Mar/2018 15:15:10] "GET /lookup?date1=&date2=&name=&seller=&pri=5&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6844
+[02/Mar/2018 15:16:09] "GET / HTTP/1.1" 200 12738
+[03/Mar/2018 22:12:35] "GET / HTTP/1.1" 200 12396
+Not Found: /favicon.ico
+[03/Mar/2018 22:12:36] "GET /favicon.ico HTTP/1.1" 404 2522
+[03/Mar/2018 22:12:57] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[03/Mar/2018 22:13:13] "POST / HTTP/1.1" 200 12735
+[04/Mar/2018 15:04:58] "GET / HTTP/1.1" 200 12396
+Not Found: /favicon.ico
+[04/Mar/2018 15:04:58] "GET /favicon.ico HTTP/1.1" 404 2526
+[04/Mar/2018 15:05:51] "GET /GetSecData?Pri=3 HTTP/1.1" 200 306
+[04/Mar/2018 15:06:04] "POST / HTTP/1.1" 200 12746
+[04/Mar/2018 15:07:47] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[04/Mar/2018 15:08:06] "POST / HTTP/1.1" 200 12746
+[04/Mar/2018 15:08:50] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[04/Mar/2018 15:09:01] "POST / HTTP/1.1" 200 12746
+[04/Mar/2018 15:09:55] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[04/Mar/2018 15:10:08] "POST / HTTP/1.1" 200 12746
+[04/Mar/2018 15:10:56] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[04/Mar/2018 15:11:07] "POST / HTTP/1.1" 200 12746
+[04/Mar/2018 15:11:18] "GET /GetDateItems?date1=2018-03-03 HTTP/1.1" 200 863
+[04/Mar/2018 15:11:27] "GET /lookup HTTP/1.1" 200 6204
+[04/Mar/2018 15:11:40] "GET /lookup?date1=2018-03-03&date2=2018-03-03&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 7231
+[05/Mar/2018 09:09:12] "GET / HTTP/1.1" 200 12396
+[05/Mar/2018 09:10:04] "GET /GetSecData?Pri=4 HTTP/1.1" 200 180
+[05/Mar/2018 09:10:26] "POST / HTTP/1.1" 200 12396
+[05/Mar/2018 09:10:50] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[05/Mar/2018 09:11:01] "POST / HTTP/1.1" 200 12740
+[05/Mar/2018 09:11:07] "GET /lookup HTTP/1.1" 200 6204
+[05/Mar/2018 09:11:17] "GET /lookup?date1=&date2=&name=&seller=%E7%81%AB%E8%BD%A6%E7%AB%99&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6437
+[05/Mar/2018 09:11:42] "GET / HTTP/1.1" 200 12740
+[05/Mar/2018 09:11:49] "GET /lookup HTTP/1.1" 200 6204
+[05/Mar/2018 09:12:28] "GET / HTTP/1.1" 200 12740
+[05/Mar/2018 09:12:34] "GET /lookup HTTP/1.1" 200 6204
+[05/Mar/2018 09:13:02] "GET / HTTP/1.1" 200 12740
+[05/Mar/2018 09:13:34] "GET /GetDateItems?date1=2018-02-26 HTTP/1.1" 200 686
+[05/Mar/2018 09:14:11] "GET /GetSecData?Pri=4 HTTP/1.1" 200 180
+[05/Mar/2018 09:14:38] "POST / HTTP/1.1" 200 12740
+[05/Mar/2018 09:14:54] "GET /GetDateItems?date1=2018-02-26 HTTP/1.1" 200 870
+[05/Mar/2018 09:15:11] "GET /lookup HTTP/1.1" 200 6204
+[05/Mar/2018 09:15:24] "GET /lookup?date1=&date2=&name=%E5%81%9C%E8%BD%A6%E8%B4%B9&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 7660
+[05/Mar/2018 13:03:40] "GET / HTTP/1.1" 200 12740
+[05/Mar/2018 13:04:18] "GET /GetSecData?Pri=4 HTTP/1.1" 200 180
+[05/Mar/2018 13:04:31] "POST / HTTP/1.1" 200 12740
+[05/Mar/2018 13:04:53] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[05/Mar/2018 13:05:04] "POST / HTTP/1.1" 200 13081
+[05/Mar/2018 13:05:08] "GET /lookup HTTP/1.1" 200 6204
+[05/Mar/2018 13:05:14] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=1 HTTP/1.1" 200 25720
+[05/Mar/2018 13:05:19] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=4 HTTP/1.1" 200 26826
+[05/Mar/2018 13:05:26] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=2 HTTP/1.1" 200 18632
+[05/Mar/2018 13:05:34] "GET /lookup?date1=&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=3 HTTP/1.1" 200 6836
+[05/Mar/2018 13:06:48] "GET /lookup?date1=2018-01-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 59305
+[05/Mar/2018 13:09:04] "GET / HTTP/1.1" 200 13081
+[05/Mar/2018 13:40:31] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[05/Mar/2018 13:40:40] "POST / HTTP/1.1" 200 13422
+[05/Mar/2018 14:53:18] "GET /lookup HTTP/1.1" 200 6204
+[05/Mar/2018 17:28:44] "GET / HTTP/1.1" 200 13422
+[05/Mar/2018 17:29:57] "GET /GetSecData?Pri=3 HTTP/1.1" 200 306
+[05/Mar/2018 17:30:11] "GET /GetSecData?Pri=6 HTTP/1.1" 200 266
+[05/Mar/2018 17:30:36] "POST / HTTP/1.1" 200 13771
+[05/Mar/2018 17:57:31] "GET /GetDateItems?date1=2018-03-05 HTTP/1.1" 200 718
+[05/Mar/2018 18:01:30] "POST / HTTP/1.1" 200 14120
+[05/Mar/2018 18:01:35] "GET /GetSecData?Pri=6 HTTP/1.1" 200 312
+[05/Mar/2018 18:01:44] "GET /delete_item?id=330 HTTP/1.1" 302 0
+[05/Mar/2018 18:01:44] "GET / HTTP/1.1" 200 13771
+[05/Mar/2018 18:01:45] "GET /delete_item?id=329 HTTP/1.1" 302 0
+[05/Mar/2018 18:01:45] "GET / HTTP/1.1" 200 13422
+[05/Mar/2018 18:02:52] "GET /GetSecData?Pri=6 HTTP/1.1" 200 312
+[05/Mar/2018 18:03:06] "POST / HTTP/1.1" 200 13771
+[05/Mar/2018 18:04:09] "GET /GetDateItems?date1=2018-03-05 HTTP/1.1" 200 718
+[05/Mar/2018 18:04:16] "GET /lookup HTTP/1.1" 200 6204
+[05/Mar/2018 18:04:24] "GET /lookup?date1=2018-03-05&date2=2018-03-05&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 7048
+[05/Mar/2018 18:05:14] "GET /lookup?date1=2018-03-04&date2=2018-03-04&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 6848
+[05/Mar/2018 18:05:47] "GET /lookup?date1=2018-03-05&date2=2018-03-05&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 7048
+[06/Mar/2018 08:42:55] "GET / HTTP/1.1" 200 12396
+[06/Mar/2018 08:43:46] "GET /GetSecData?Pri=4 HTTP/1.1" 200 180
+[06/Mar/2018 08:44:02] "POST / HTTP/1.1" 200 12396
+[06/Mar/2018 08:44:21] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[06/Mar/2018 08:44:30] "POST / HTTP/1.1" 200 12740
+[06/Mar/2018 09:56:01] "GET /GetSecData?Pri=2 HTTP/1.1" 200 289
+[06/Mar/2018 09:56:15] "POST / HTTP/1.1" 200 13070
+[06/Mar/2018 09:58:01] "GET /delete_item?id=334 HTTP/1.1" 302 0
+[06/Mar/2018 09:58:01] "GET / HTTP/1.1" 200 12740
+[06/Mar/2018 09:59:08] "GET / HTTP/1.1" 200 12740
+Not Found: /favicon.ico
+[06/Mar/2018 09:59:08] "GET /favicon.ico HTTP/1.1" 404 2526
+[06/Mar/2018 09:59:21] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[06/Mar/2018 09:59:44] "POST / HTTP/1.1" 200 13067
+[06/Mar/2018 10:49:19] "GET /lookup HTTP/1.1" 200 6204
+[06/Mar/2018 10:49:20] "GET / HTTP/1.1" 200 13067
+Unhandled exception in thread started by <function wrapper at 0x1088daa28>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 228, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/model_checks.py", line 30, in check_all_models
+    errors.extend(model.check(**kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 1284, in check
+    errors.extend(cls._check_fields(**kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/base.py", line 1359, in _check_fields
+    errors.extend(field.check(**kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 913, in check
+    errors = super(AutoField, self).check(**kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 219, in check
+    errors.extend(self._check_backend_specific_checks(**kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in _check_backend_specific_checks
+    return connections[db].validation.check_field(self, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/validation.py", line 49, in check_field
+    field_type = field.db_type(self.connection)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 644, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/base.py", line 174, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/features.py", line 53, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/base.py", line 385, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 591, in temporary_connection
+    cursor = self.cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 254, in cursor
+    return self._cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/base.py", line 274, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/Library/Python/2.7/site-packages/MySQLdb/__init__.py", line 86, in Connect
+    return Connection(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 204, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '192.168.1.121' (60)")
+[08/Mar/2018 09:35:10] "GET / HTTP/1.1" 200 12396
+Not Found: /favicon.ico
+[08/Mar/2018 09:35:10] "GET /favicon.ico HTTP/1.1" 404 2522
+[08/Mar/2018 09:36:33] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 09:36:44] "POST / HTTP/1.1" 200 12396
+[08/Mar/2018 09:37:05] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 09:37:17] "POST / HTTP/1.1" 200 12396
+[08/Mar/2018 09:37:45] "GET /GetSecData?Pri=4 HTTP/1.1" 200 180
+[08/Mar/2018 09:37:55] "POST / HTTP/1.1" 200 12396
+[08/Mar/2018 09:38:12] "GET /GetDateItems?date1=2018-03-07 HTTP/1.1" 200 508
+[08/Mar/2018 09:38:29] "GET /GetDateItems?date1=2018-03-06 HTTP/1.1" 200 323
+[08/Mar/2018 09:39:57] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 09:40:12] "POST / HTTP/1.1" 200 12396
+[08/Mar/2018 09:40:19] "GET /GetDateItems?date1=2018-03-05 HTTP/1.1" 200 890
+[08/Mar/2018 09:40:23] "GET /GetDateItems?date1=2018-03-06 HTTP/1.1" 200 517
+[08/Mar/2018 09:42:35] "GET /GetDateItems?date1=2018-03-05 HTTP/1.1" 200 890
+[08/Mar/2018 09:43:51] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 09:44:10] "POST / HTTP/1.1" 200 12396
+[08/Mar/2018 09:51:55] "GET /GetDateItems?date1=2018-03-06 HTTP/1.1" 200 693
+[08/Mar/2018 09:54:09] "GET /GetDateItems?date1=2018-03-05 HTTP/1.1" 200 890
+[08/Mar/2018 09:54:12] "GET /GetDateItems?date1=2018-03-06 HTTP/1.1" 200 552
+[08/Mar/2018 09:54:24] "GET /lookup HTTP/1.1" 200 6204
+[08/Mar/2018 09:54:34] "GET /lookup?date1=2018-03-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 10867
+[08/Mar/2018 09:55:32] "GET / HTTP/1.1" 200 12396
+[08/Mar/2018 09:56:14] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 09:56:22] "POST / HTTP/1.1" 200 12737
+[08/Mar/2018 09:56:51] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 09:57:13] "POST / HTTP/1.1" 200 13084
+[08/Mar/2018 10:47:15] "GET / HTTP/1.1" 200 13084
+Not Found: /favicon.ico
+[08/Mar/2018 10:47:15] "GET /favicon.ico HTTP/1.1" 404 2522
+[08/Mar/2018 10:47:22] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 10:47:32] "GET /lookup HTTP/1.1" 200 6204
+[08/Mar/2018 10:47:38] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 10:47:42] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=3&per=Not_data3 HTTP/1.1" 200 11511
+[08/Mar/2018 10:48:01] "GET / HTTP/1.1" 200 13084
+[08/Mar/2018 12:38:05] "GET / HTTP/1.1" 200 13084
+[08/Mar/2018 12:38:26] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[08/Mar/2018 12:38:33] "POST / HTTP/1.1" 200 13426
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/qlb/workspace/payment_ui/payment_ui/view.py", line 107, in hello
+    return render(request,'hello.html',context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 887, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 254, in cursor
+    return self._cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/base.py", line 274, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/Library/Python/2.7/site-packages/MySQLdb/__init__.py", line 86, in Connect
+    return Connection(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 204, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '192.168.1.121' (64)")
+[10/Mar/2018 11:43:23] "GET / HTTP/1.1" 500 179252
+Not Found: /favicon.ico
+[10/Mar/2018 11:43:24] "GET /favicon.ico HTTP/1.1" 404 2526
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/qlb/workspace/payment_ui/payment_ui/view.py", line 107, in hello
+    return render(request,'hello.html',context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 887, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 254, in cursor
+    return self._cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/base.py", line 274, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/Library/Python/2.7/site-packages/MySQLdb/__init__.py", line 86, in Connect
+    return Connection(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 204, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '192.168.1.121' (64)")
+[10/Mar/2018 11:43:27] "GET / HTTP/1.1" 500 179252
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/qlb/workspace/payment_ui/payment_ui/view.py", line 107, in hello
+    return render(request,'hello.html',context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 887, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 254, in cursor
+    return self._cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/base.py", line 274, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/Library/Python/2.7/site-packages/MySQLdb/__init__.py", line 86, in Connect
+    return Connection(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 204, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '192.168.1.121' (64)")
+[10/Mar/2018 11:43:29] "GET / HTTP/1.1" 500 179252
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/qlb/workspace/payment_ui/payment_ui/view.py", line 107, in hello
+    return render(request,'hello.html',context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 887, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 254, in cursor
+    return self._cursor()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 229, in _cursor
+    self.ensure_connection()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 213, in ensure_connection
+    self.connect()
+  File "/Library/Python/2.7/site-packages/django/db/backends/base/base.py", line 189, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Library/Python/2.7/site-packages/django/db/backends/mysql/base.py", line 274, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/Library/Python/2.7/site-packages/MySQLdb/__init__.py", line 86, in Connect
+    return Connection(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 204, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '192.168.1.121' (60)")
+[10/Mar/2018 12:00:29] "GET / HTTP/1.1" 500 179117
+[2018-03-10 12:00:29,111] - Broken pipe from ('192.168.1.102', 44753)
+
+[10/Mar/2018 18:32:20] "GET / HTTP/1.1" 200 12396
+[10/Mar/2018 18:32:56] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[10/Mar/2018 18:33:14] "POST / HTTP/1.1" 200 12396
+[10/Mar/2018 18:34:30] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[10/Mar/2018 18:34:47] "POST / HTTP/1.1" 200 12731
+[10/Mar/2018 18:34:51] "GET /GetDateItems?date1=2018-03-09 HTTP/1.1" 200 160
+[10/Mar/2018 18:35:04] "GET /lookup HTTP/1.1" 200 6204
+[10/Mar/2018 18:35:21] "GET /lookup?date1=2018-03-05&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 9457
+[11/Mar/2018 23:54:32] "GET / HTTP/1.1" 200 12396
+Not Found: /favicon.ico
+[11/Mar/2018 23:54:32] "GET /favicon.ico HTTP/1.1" 404 2526
+[12/Mar/2018 09:00:22] "GET / HTTP/1.1" 200 12396
+[12/Mar/2018 09:02:17] "GET /GetSecData?Pri=3 HTTP/1.1" 200 306
+[12/Mar/2018 09:02:29] "POST / HTTP/1.1" 200 12396
+[12/Mar/2018 09:02:33] "GET /GetDateItems?date1=2018-03-11 HTTP/1.1" 200 169
+[12/Mar/2018 09:02:57] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[12/Mar/2018 09:03:05] "POST / HTTP/1.1" 200 12741
+[12/Mar/2018 09:03:12] "GET /lookup HTTP/1.1" 200 6204
+[12/Mar/2018 09:03:14] "GET / HTTP/1.1" 200 12741
+[12/Mar/2018 09:03:18] "GET /lookup HTTP/1.1" 200 6204
+[12/Mar/2018 09:03:23] "GET / HTTP/1.1" 200 12741
+[12/Mar/2018 12:33:38] "GET / HTTP/1.1" 200 12741
+[12/Mar/2018 12:33:54] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[12/Mar/2018 12:34:03] "POST / HTTP/1.1" 200 13083
+[12/Mar/2018 13:00:12] "GET /GetDateItems?date1=2018-03-01 HTTP/1.1" 200 514
+[12/Mar/2018 13:00:15] "GET /lookup HTTP/1.1" 200 6204
+[12/Mar/2018 13:00:21] "GET /lookup?date1=2018-03-01&date2=&name=&seller=&pri=Not_data1&sec=Not_data2&per=Not_data3 HTTP/1.1" 200 12472
+[12/Mar/2018 13:00:46] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[12/Mar/2018 13:00:49] "GET /lookup?date1=&date2=&name=&seller=&pri=1&sec=2&per=Not_data3 HTTP/1.1" 200 12478
+[12/Mar/2018 17:17:18] "GET / HTTP/1.1" 200 13083
+[12/Mar/2018 17:17:50] "GET /GetSecData?Pri=1 HTTP/1.1" 200 238
+[12/Mar/2018 17:18:06] "POST / HTTP/1.1" 200 13428

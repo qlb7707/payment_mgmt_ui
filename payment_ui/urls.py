@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^GetSecData$',view.retSecData),
     url(r'^GetDateItems$',view.retDateItems),
     url(r'^payment_post$',view.recordPayment),
-    url(r'^lookup$',view.lookup),
+    url(r'^lookup$',view.lookupitems),
     url(r'^delete_item$',view.delete_item),
 ]

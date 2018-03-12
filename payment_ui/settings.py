@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'payment_mgmt',
         'USER': 'root',
         'PASSWORD': '123456',
-        'HOST': '192.168.1.120',
+        'HOST': '192.168.1.121',
         'PORT': 3306,
     }
 }
